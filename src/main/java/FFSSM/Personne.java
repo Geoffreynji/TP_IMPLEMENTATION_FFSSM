@@ -8,17 +8,17 @@ import java.time.LocalDate;
 
 public class Personne
 {
-	public String numeroINSEE;
+	private String numeroINSEE;
 	
-	public String nom;
+	private String nom;
 	
-	public String prenom;
+	private String prenom;
 	
-	public String adresse;
+	private String adresse;
 	
-	public String telephone;
+	private String telephone;
 	
-	public LocalDate naissance;
+	private LocalDate naissance;
 
     public Personne(String numeroINSEE, String nom, String prenom, String adresse, String telephone, LocalDate naissance) {
         setNumeroINSEE(numeroINSEE); // Le mutateur fait le contrôle non null

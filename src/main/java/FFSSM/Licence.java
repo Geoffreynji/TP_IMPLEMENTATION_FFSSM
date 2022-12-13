@@ -4,6 +4,7 @@
 package FFSSM;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Licence {
 
@@ -45,8 +46,13 @@ public class Licence {
      * @return vrai si valide à la date d
      **/
     public boolean estValide(LocalDate d) {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        boolean result = true; 
+        long diff = ChronoUnit.YEARS.between(d, delivrance);
+    	if(diff > 1)
+    	{
+    		result = false;
+    	}
+    	return result;
     }
 
 }
