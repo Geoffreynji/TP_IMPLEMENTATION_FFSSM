@@ -13,6 +13,8 @@ public class LicenceTest {
 	Club club; 
 	Personne p;
 	Licence l; 
+	Plongee plongee;
+	Site site;
 	
 	
 	
@@ -23,6 +25,8 @@ public class LicenceTest {
 		club = new Club(m,"Damien","9034");
 		p = new Personne("0220", "Naji", "Geoffrey", "Chemin", "08989", LocalDate.of(2001, 03, 10));
 		l = new Licence(p, "08989", LocalDate.of(2002, 03, 10),club);
+		site = new Site("Carcassonne", null);
+		plongee = new Plongee(site, m, LocalDate.of(2018, 02, 28), 20, 30);
 		
 	}
 	
@@ -42,5 +46,9 @@ public class LicenceTest {
 		Licence licence = new Licence(p, "08989", LocalDate.of(2002, 03, 10),club);
 		assertEquals(true, licence.estValide(LocalDate.of(2002, 03, 10)));
 	}
+	
 
 }
+
+
+
